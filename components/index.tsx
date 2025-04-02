@@ -1,27 +1,18 @@
-import React from 'react';
-import { useState, useRef, useEffect } from 'react';
-import {Text, View, SafeAreaView, FlatList, TouchableOpacity, Dimensions, Animated, Button } from 'react-native';
-import { useFonts, Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
-import { LinearGradient } from 'expo-linear-gradient';
+/* eslint-disable prettier/prettier */
 import { useNavigation } from '@react-navigation/native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { useState, useRef, useEffect } from 'react';
+import {Text, View, FlatList, TouchableOpacity, Dimensions, Animated } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
 const WelcomePage = () => {
    const navigation = useNavigation();
-   const [currentIndex, setCurrentIndex] = useState(0); 
-   const flatListRef = useRef(null); 
+   const [currentIndex, setCurrentIndex] = useState(0);
    const fadeAnim = useRef(new Animated.Value(0)).current;
-
-   
-   const [fontsLoaded] = useFonts({
-     Poppins_400Regular,
-     Poppins_700Bold,
-   });
 
    const data = [
         {id: '1', text: "It's Not Just Shopping, \nIt's Shaping Politics!"},
-        //{id: '2', text: "With Cartocracy, we believe that striving for \ngood governance comes from a commitment to transparency, accountability, and inclusivity.\n Our mission is to empower individuals and communities by ensuring that \ndecisions are made with integrity, backed by data, and focused on the well-being of all."},
         {id: '2', text: "Join us in making \ninformed choices \nand shaping the future."},
         {id: '3', text: "Together, we can build\n a political landscape \nthat works\n for everyone."},
    ];
@@ -30,7 +21,7 @@ const WelcomePage = () => {
     fadeAnim.setValue(0);
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 1000, // 1 second fade-in
+      duration: 1000, 
       useNativeDriver: true,
     }).start();
   }, [currentIndex]);
@@ -52,7 +43,7 @@ const WelcomePage = () => {
         pagingEnabled
         showsHorizontalScrollIndicator={false}
         onScroll={(event) => handleScroll(event)}
-        renderItem={({ item }) => (
+        renderItem={() => (
           <View className="flex-1 -m-1  p-6 justify-center items-center">      
             <Animated.Text
                 style={{ opacity: fadeAnim }}
@@ -87,6 +78,7 @@ const WelcomePage = () => {
    </LinearGradient>
   );
 };
+
 export default WelcomePage;
 
 
