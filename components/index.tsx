@@ -65,7 +65,7 @@ const WelcomePage = () => {
 
       <TouchableOpacity
         className="mb-3 mt-3 rounded-lg bg-blue-500 px-5 py-2"
-        onPress={() => navigation.navigate('Signup')}>
+        onPress={() => navigation.navigate('SignIn')}>
         <Text className="text-lg font-bold text-white" style={{ fontFamily: 'Poppins_700Bold' }}>
           Get Started
         </Text>

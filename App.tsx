@@ -3,8 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts } from 'expo-font';
 
 import WelcomePage from './components/index';
-import Signup from './components/signup';
-import Login from './components/login';
+import SignUp from './components/signup';
+import SignIn from './components/login';
 
 import './global.css';
 
@@ -21,8 +21,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen name="Welcome" component={WelcomePage} options={{ headerShown: false }} />
-        <Stack.Screen name="Signup" component={Signup} options={{ headerShown: false }} />
-        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
+        <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} />
+        <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
