@@ -1,14 +1,11 @@
 import { View, Text} from 'react-native';
 
 const Signup = () => {
-   return (
-    <View className="flex-1 bg-white items-center">
+  return (
+    <View className="flex-1 items-center bg-white">
       <Text className="font-bold">Signup</Text>
-    </View> 
-   ); 
+    </View>
+  );
 };
+
 export default Signup;
-
-
-
-
