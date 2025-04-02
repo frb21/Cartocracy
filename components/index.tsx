@@ -1,5 +1,4 @@
 import { useNavigation } from '@react-navigation/native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useState, useRef, useEffect } from 'react';
 import { Text, View, FlatList, TouchableOpacity, Dimensions, Animated } from 'react-native';
 
@@ -34,9 +33,7 @@ const WelcomePage = () => {
   };
 
   return (
-    <LinearGradient
-      colors={['#c9b07d', '#ffddc1', '#ffb385']}
-      className="flex-1 items-center justify-center">
+    <View className="flex-1 items-center justify-center bg-white">
       <FlatList
         data={data}
         horizontal
@@ -73,7 +70,7 @@ const WelcomePage = () => {
           Get Started
         </Text>
       </TouchableOpacity>
-    </LinearGradient>
+  </View>
   );
 };
 

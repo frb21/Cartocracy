@@ -1,19 +1,14 @@
-import { View, Text, TextInput } from 'react-native';
-import React from 'react'
+import React from 'react'; 
+import { View, Text, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 const Login = () => {
-  return(
-    <View className="bg-white h-full w-full">
-       
-    
-    </View>  
-  );
+  return (
+    <View className="h-full w-full bg-white">
+      <StatusBar style="light" />
+      <Image className="absolute h-full w-full" source={require('../assets/double.png')} />
+      <Text>Login </Text>
+    </View>
+  )
 };
 export default Login;
-
-
-
-
-
-
